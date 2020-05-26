@@ -3,8 +3,8 @@ const { app, BrowserWindow } = require('electron')
 function createWindow() {
     // Cria uma janela de navegação.
     const win = new BrowserWindow({
-        width: 800,
-        height: 600,
+        width: 1280,
+        height: 720,
         titleBarStyle: 'hidden',
         alwaysOnTop: 'true',
         webPreferences: {
@@ -14,6 +14,7 @@ function createWindow() {
 
     // and load the index.html of the app.
     win.loadURL('http://google.com.br');
+    win.removeMenu();
 }
 
 // This method will be called when Electron has finished
